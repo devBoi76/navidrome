@@ -7,7 +7,7 @@
 // CONFIGURATION
 // ============================================
 
-const ACCENT_COLOR = '#009688' // Material teal
+const ACCENT_COLOR = '#80513D' // Material teal
 const UNBOUNDED_FONT_PATH = 'fonts/Unbounded-Variable.woff2'
 
 // ============================================
