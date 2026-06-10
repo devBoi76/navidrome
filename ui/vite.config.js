@@ -56,8 +56,8 @@ export default defineConfig({
 // PWA manifest
 function manifest() {
   return {
-    name: 'Navidrome',
-    short_name: 'Navidrome',
+    name: 'Pieśni',
+    short_name: 'Pieśni',
     description:
       'Navidrome, an open source web-based music collection server and streamer',
     categories: ['music', 'entertainment'],
