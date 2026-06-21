@@ -22,29 +22,5 @@ import TokyoNightLightTheme from './tokyoNightLight'
 import TokyoNightTheme from './tokyoNight'
 
 export default {
-  // Classic default themes
-  LightTheme,
-  DarkTheme,
-
-  // New themes should be added here, in alphabetic order
-  AmusicTheme,
-  CatppuccinMacchiatoTheme,
-  CatppuccinLatteTheme,
-  DraculaTheme,
-  ElectricPurpleTheme,
-  ExtraDarkTheme,
-  GreenTheme,
-  GruvboxDarkTheme,
-  LigeraTheme,
-  MonokaiTheme,
-  MoonbaseAlphaTheme,
-  MoonbaseBravoTheme,
   NautilineTheme,
-  NordTheme,
-  NuclearTheme,
-  NutballTheme,
-  SpotifyTheme,
-  SquiddiesGlassTheme,
-  TokyoNightLightTheme,
-  TokyoNightTheme,
 }
