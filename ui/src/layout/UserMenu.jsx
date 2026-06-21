@@ -45,6 +45,11 @@ const useStyles = makeStyles((theme) => ({
     overflow: 'hidden',
     textOverflow: 'ellipsis',
   },
+  link: {
+    textDecoration: 'none',
+    color: theme.palette.primary.main,
+    marginLeft: '0.25rem',
+  },
 }))
 
 const UserMenu = (props) => {
@@ -73,58 +78,13 @@ const UserMenu = (props) => {
 
   return (
     <div className={classes.user}>
-      <Tooltip title={label && translate(label, { _: label })}>
-        <IconButton
-          className={classes.button}
-          aria-label={label && translate(label, { _: label })}
-          aria-owns={open ? 'menu-appbar' : null}
-          aria-haspopup={true}
-          onClick={handleMenu}
-        >
-          {loaded && identity.avatar ? (
-            <Avatar
-              className={classes.avatar}
-              src={identity.avatar}
-              alt={identity.fullName}
-            />
-          ) : (
-            icon
-          )}
-        </IconButton>
-      </Tooltip>
-      <Popover
-        id="menu-appbar"
-        anchorEl={anchorEl}
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'right',
-        }}
-        transformOrigin={{
-          vertical: 'top',
-          horizontal: 'right',
-        }}
-        open={open}
-        onClose={handleClose}
+      <a
+        href="https://www.nastrazy.org"
+        rel="noopener noreferrer"
+        className={classes.link}
       >
-        <MenuList>
-          {loaded && (
-            <Card elevation={0} className={classes.username}>
-              <CardContent className={classes.usernameWrap}>
-                <Typography variant={'button'}>{identity.fullName}</Typography>
-              </CardContent>
-            </Card>
-          )}
-          <Divider />
-          {Children.map(children, (menuItem) =>
-            isValidElement(menuItem)
-              ? cloneElement(menuItem, {
-                  onClick: handleClose,
-                })
-              : null,
-          )}
-          {(!config.auth || !!config.extAuthLogoutURL) && logout}
-        </MenuList>
-      </Popover>
+        Nastrazy.org
+      </a>
     </div>
   )
 }

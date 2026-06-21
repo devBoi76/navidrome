@@ -1,12 +1,16 @@
 import React from 'react'
 import { useMediaQuery } from '@material-ui/core'
 import { useTranslate } from 'react-admin'
+import { makeStyles } from '@material-ui/core/styles'
+
+const useStyles = makeStyles((theme) => ({}), { name: 'RaLink' })
 
 export const Title = ({ subTitle, args }) => {
   const translate = useTranslate()
   const isDesktop = useMediaQuery((theme) => theme.breakpoints.up('md'))
   const text = translate(subTitle, { ...args, _: subTitle })
 
+  const classes = useStyles()
   if (isDesktop) {
     return <span>Pieśni {text ? ` - ${text}` : ''}</span>
   }
