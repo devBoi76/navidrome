@@ -785,6 +785,15 @@ const NautilineTheme = {
         backgroundColor: colors.accent.faded,
       },
     },
+    RaAppBar: {
+      toolbar: {
+        '& button': {
+          '&:not(:nth-child(1))': {
+            display: 'none',
+          },
+        },
+      },
+    },
   },
   player: {
     theme: 'light',
