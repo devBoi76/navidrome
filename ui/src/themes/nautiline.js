@@ -8,7 +8,32 @@
 // ============================================
 
 const ACCENT_COLOR = '#80513D' // Material teal
-const UNBOUNDED_FONT_PATH = 'fonts/Unbounded-Variable.woff2'
+const Poppins_FONT_PATH = 'fonts/Poppins/Poppins-SemiBold.ttf'
+const getPoppinsPath = (weight) => `fonts/Poppins/Poppins-${weight}.ttf`
+const generateFontFaces = () => {
+  const weights = [
+    { weight: 400, name: 'Regular' },
+    { weight: 500, name: 'SemiBold' },
+    { weight: 600, name: 'SemiBold' }, // add more as needed
+    { weight: 700, name: 'Bold' },
+  ]
+
+  return weights
+    .map(
+      ({ weight, name }) => `
+      @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: ${weight};
+        font-display: swap;
+        src: url('${getPoppinsPath(name)}') format('ttf');
+      }
+    `,
+    )
+    .join('\n')
+}
+
+const fontFace = generateFontFaces()
 
 // ============================================
 // DESIGN TOKENS
@@ -55,6 +80,7 @@ const tokens = {
   typography: {
     fontFamily: {
       base: [
+        'Poppins',
         '-apple-system',
         'BlinkMacSystemFont',
         '"SF Pro Text"',
@@ -62,17 +88,9 @@ const tokens = {
         'Arial',
         'sans-serif',
       ].join(','),
-      heading: '"Unbounded", sans-serif',
+      heading: '"Poppins", sans-serif',
     },
-    fontFace: `
-      @font-face {
-        font-family: 'Unbounded';
-        font-style: normal;
-        font-weight: 300 800;
-        font-display: swap;
-        src: url('${UNBOUNDED_FONT_PATH}') format('woff2');
-      }
-    `,
+    fontFace: fontFace,
   },
   spacing: {
     xs: '0.25rem',
@@ -271,13 +289,7 @@ const NautilineTheme = {
   overrides: {
     MuiCssBaseline: {
       '@global': {
-        '@font-face': {
-          fontFamily: 'Unbounded',
-          fontStyle: 'normal',
-          fontWeight: '300 800',
-          fontDisplay: 'swap',
-          src: `url('${UNBOUNDED_FONT_PATH}') format('woff2')`,
-        },
+        '@font-face': fontFace,
         body: {
           backgroundColor: colors.background.primary,
         },
@@ -798,13 +810,7 @@ const NautilineTheme = {
   player: {
     theme: 'light',
     stylesheet: `
-      @font-face {
-        font-family: 'Unbounded';
-        font-style: normal;
-        font-weight: 300 800;
-        font-display: swap;
-        src: url('${UNBOUNDED_FONT_PATH}') format('woff2');
-      }
+      ${fontFace}
 
       .react-jinke-music-player-main {
         background-color: ${colors.background.primary} !important;
