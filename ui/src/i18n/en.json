@@ -40,7 +40,8 @@
         "tags": "Additional Tags",
         "mappedTags": "Mapped tags",
         "rawTags": "Raw tags",
-        "missing": "Missing"
+        "missing": "Missing",
+        "work": "Work"
       },
       "actions": {
         "addToQueue": "Play Later",
