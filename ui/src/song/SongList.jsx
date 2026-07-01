@@ -141,6 +141,7 @@ const SongList = (props) => {
 
   const toggleableFields = useMemo(() => {
     return {
+      work: <FunctionField source="work" render={(r) => r.work || ''} />,
       album: isDesktop && <AlbumLinkField source="album" sortByOrder={'ASC'} />,
       artist: <ArtistLinkField source="artist" />,
       composer: <ArtistLinkField source="composer" />,

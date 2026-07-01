@@ -58,6 +58,13 @@ export const SongInfo = (props) => {
     'albumversion',
   ]
   const data = {
+    work: (
+      <FunctionField
+        source="work"
+        render={(r) => r.work || ''}
+        sortable={false}
+      />
+    ),
     path: <PathField />,
     libraryName: <TextField source="libraryName" />,
     album: (

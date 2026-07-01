@@ -100,6 +100,7 @@ const AlbumSongs = (props) => {
       trackNumber: isDesktop && (
         <TextField source="trackNumber" label="#" sortable={false} />
       ),
+      work: <FunctionField source="work" render={(r) => r.work || ''} />,
       title: (
         <SongTitleField
           source="title"
@@ -111,7 +112,9 @@ const AlbumSongs = (props) => {
       composer: isDesktop && (
         <ArtistLinkField source="composer" sortable={false} />
       ),
-      duration: <DurationField source="duration" sortable={false} />,
+      duration: isDesktop && (
+        <DurationField source="duration" sortable={false} />
+      ),
       year: isDesktop && (
         <FunctionField
           source="year"

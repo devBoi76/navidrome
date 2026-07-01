@@ -168,6 +168,7 @@ func (t TagName) String() string {
 // Tag names, as defined in the mappings.yaml file
 const (
 	TagAlbum          TagName = "album"
+	TagWork           TagName = "work"
 	TagTitle          TagName = "title"
 	TagTrackNumber    TagName = "track"
 	TagDiscNumber     TagName = "disc"

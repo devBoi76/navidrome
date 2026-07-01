@@ -21,6 +21,7 @@ func (md Metadata) ToMediaFile(libID int, folderID string) model.MediaFile {
 	}
 
 	// Title and Album
+	mf.Work = md.String(model.TagWork)
 	mf.Title = md.mapTrackTitle()
 	mf.Album = md.mapAlbumName()
 	mf.SortTitle = md.String(model.TagTitleSort)

@@ -30,6 +30,7 @@ type MediaFile struct {
 	LibraryName string `structs:"-" json:"libraryName" hash:"ignore"`
 	FolderID    string `structs:"folder_id" json:"folderId" hash:"ignore"`
 	Path        string `structs:"path" json:"path" hash:"ignore"`
+	Work        string `structs:"work" json:"work"`
 	Title       string `structs:"title" json:"title"`
 	Album       string `structs:"album" json:"album"`
 	ArtistID    string `structs:"artist_id" json:"artistId"` // Deprecated: Use Participants instead
