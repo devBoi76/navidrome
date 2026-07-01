@@ -49,6 +49,7 @@ const navigationHandler = async (params) => {
 }
 
 // self.__WB_MANIFEST is default injection point
+workbox.precaching.cleanupOutdatedCaches();
 workbox.precaching.precacheAndRoute(self.__WB_MANIFEST)
 
 // Register this strategy to handle all navigations.
