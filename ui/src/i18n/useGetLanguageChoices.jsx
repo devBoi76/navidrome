@@ -9,9 +9,11 @@ const useGetLanguageChoices = () => {
     {},
   )
 
-  const choices = [{ id: 'en', name: 'English' }]
+  const choices = [{ id: 'pl', name: 'Polski' }]
   if (loaded) {
-    ids.forEach((id) => choices.push({ id: id, name: data[id].name }))
+    ids.forEach(
+      (id) => id !== 'pl' && choices.push({ id: id, name: data[id].name }),
+    )
   }
   choices.sort((a, b) => a.name.localeCompare(b.name))
 
