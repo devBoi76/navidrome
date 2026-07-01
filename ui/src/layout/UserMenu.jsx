@@ -50,6 +50,12 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.main,
     marginLeft: '0.25rem',
   },
+  logoImage: {
+    height: '1.7em',
+    verticalAlign: 'middle',
+    marginRight: '0.4rem',
+    marginTop: '-0.1rem',
+  },
 }))
 
 const UserMenu = (props) => {
@@ -83,6 +89,7 @@ const UserMenu = (props) => {
         rel="noopener noreferrer"
         className={classes.link}
       >
+        <img className={classes.logoImage} src="/krzyz-w-koronie-256x256.png" />
         Nastrazy.org
       </a>
     </div>
