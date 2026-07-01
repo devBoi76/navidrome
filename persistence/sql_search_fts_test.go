@@ -129,7 +129,7 @@ var _ = Describe("ftsColumnDefs helpers", func() {
 	Describe("ftsColumnFilters", func() {
 		It("returns column filter for media_file", func() {
 			Expect(ftsColumnFilters).To(HaveKeyWithValue("media_file",
-				"{title album artist album_artist sort_title sort_album_name sort_artist_name sort_album_artist_name disc_subtitle search_participants search_normalized}",
+				"{title album artist album_artist sort_title sort_album_name sort_artist_name sort_album_artist_name disc_subtitle work search_participants search_normalized}",
 			))
 		})
 
@@ -153,7 +153,7 @@ var _ = Describe("ftsColumnDefs helpers", func() {
 	Describe("ftsBM25Weights", func() {
 		It("returns weight CSV for media_file", func() {
 			Expect(ftsBM25Weights).To(HaveKeyWithValue("media_file",
-				"10.0, 5.0, 3.0, 3.0, 1.0, 1.0, 1.0, 1.0, 1.0, 2.0, 1.0",
+				"10.0, 5.0, 3.0, 3.0, 1.0, 1.0, 1.0, 1.0, 1.0, 2.0, 2.0, 1.0",
 			))
 		})
 
