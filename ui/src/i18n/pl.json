@@ -19,12 +19,13 @@
         "updatedAt": "Zaktualizowano",
         "bitRate": "Szybkość transmisji danych",
         "discSubtitle": "Podtytuł Płyty",
+        "disc": "Płyta %{discNumber}",
         "starred": "Ulubione",
         "comment": "Komentarz",
         "rating": "Ocena",
         "quality": "Jakość",
         "bpm": "BPM",
-        "playDate": "Ostatnio Odtwarzane",
+        "playDate": "Ostatnifo Odtwarzane",
         "channels": "Kanały",
         "createdAt": "Data dodania",
         "grouping": "Grupowanie",
@@ -37,7 +38,9 @@
         "sampleRate": "Częstotliwość próbkowania",
         "missing": "Brak",
         "libraryName": "Biblioteka",
-        "composer": "Kompozytor"
+        "composer": "Kompozytor",
+        "albumGain": "Wzmocnienie albumu",
+        "trackGain": "Wzmocnienie utworu"
       },
       "actions": {
         "addToQueue": "Odtwarzaj Później",
@@ -255,7 +258,9 @@
         "updatedAt": "Zaktualizowano",
         "createdAt": "Stworzono",
         "downloadable": "Zezwolić Na Pobieranie?"
-      }
+      },
+      "notifications": {},
+      "actions": {}
     },
     "missing": {
       "name": "Brakujący Plik|||| Brakujące Pliki",
@@ -353,7 +358,8 @@
         "allUsers": "Zezwalaj wszystkim użytkownikom",
         "selectedUsers": "Wybrani użytkownicy",
         "allLibraries": "Zezwalaj dla wszystkich bibliotek",
-        "selectedLibraries": "Wybrane biblioteki"
+        "selectedLibraries": "Wybrane biblioteki",
+        "allowWriteAccess": "Zezwalaj na zapisywanie plików"
       },
       "sections": {
         "status": "Status",
@@ -398,7 +404,8 @@
         "librariesRequired": "Wtyczka wymaga dostępu do informacji o bibliotece. Wybierz, dla której biblioteki zezwolić dostęp, lub włącz 'Zezwalaj dla wszystkich bibliotek'.",
         "requiredHosts": "Wymagane hosty",
         "configValidationError": "Weryfikacja konfiguracji nie powiodła się:",
-        "schemaRenderError": "Nie można wyrenderować formularza konfiguracji. Schemat wtyczki może być nieprawidłowy."
+        "schemaRenderError": "Nie można wyrenderować formularza konfiguracji. Schemat wtyczki może być nieprawidłowy.",
+        "allowWriteAccessHelp": "Po włączeniu wtyczka będzie miała dostęp do modyfikowania plików w katalogach bibliotek. Domyślnie, wtyczki mają dostęp tylko do odczytu."
       },
       "placeholders": {
         "configKey": "klucz",
@@ -552,6 +559,12 @@
     }
   },
   "message": {
+    "uploadCover": "Wgraj okładkę",
+    "removeCover": "Usuń okładkę",
+    "coverUploaded": "Okładka została wgrana",
+    "coverRemoved": "Okładka została usunięta",
+    "coverUploadError": "Wystąpił błąd podczas wgrywania okładki",
+    "coverRemoveError": "Wystąpił błąd podczas usuwania okładki",
     "note": "UWAGA",
     "transcodingDisabled": "Zmiana ustawień transkodowania przez interfejs sieciowy jest zablokowana z powodów bezpieczeństwa. Jeśli chcesz zmienić (edytować lub dodawać) opcje transkodowania, uruchom ponownie serwer z %{config} opcją konfiguracji.",
     "transcodingEnabled": "Navidrome aktualnie działa z %{config}, co umożliwia korzystanie z komend systemowych ustawień transkodowania poprzez interfejs sieciowy. Rekomendujemy wyłączenie tego ustawienia w celu zwiększenia bezpieczeństwa i aktywowanie go wyłącznie podczas konfiguracji transkodowania.",
@@ -671,6 +684,7 @@
       "currentValue": "Obecna Wartość",
       "configurationFile": "Plik Konfiguracyjny",
       "exportToml": "Eksportuj Konfigurację (TOML)",
+      "downloadToml": "Pobierz Konfigurację (TOML)",
       "exportSuccess": "Konfiguracja wyeksportowana do schowka w formacie TOML",
       "exportFailed": "Błąd kopiowania konfiguracji",
       "devFlagsHeader": "Flagi Rozwojowe (mogą ulec zmianie/usunięciu)",
