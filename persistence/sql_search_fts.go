@@ -228,6 +228,7 @@ var ftsColumnDefs = map[string][]ftsColumn{
 		{"sort_artist_name", 1.0},
 		{"sort_album_artist_name", 1.0},
 		{"disc_subtitle", 1.0},
+		{"work", 2.0},
 		{"search_participants", 2.0},
 		{"search_normalized", 1.0},
 	},

@@ -142,6 +142,7 @@ const SongList = (props) => {
   const toggleableFields = useMemo(() => {
     return {
       work: <FunctionField source="work" render={(r) => r.work || ''} />,
+      title: <SongTitleField source="title" showTrackNumbers={false} />,
       album: isDesktop && <AlbumLinkField source="album" sortByOrder={'ASC'} />,
       artist: <ArtistLinkField source="artist" />,
       composer: <ArtistLinkField source="composer" />,
@@ -224,7 +225,6 @@ const SongList = (props) => {
             contextAlwaysVisible={!isDesktop}
             classes={{ row: classes.row }}
           >
-            <SongTitleField source="title" showTrackNumbers={false} />
             {columns}
             <SongContextMenu
               source={'starred_at'}
