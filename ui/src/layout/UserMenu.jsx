@@ -25,6 +25,9 @@ import config from '../config'
 import authProvider from '../authProvider'
 import { startEventStream } from '../eventStream'
 import { useDispatch } from 'react-redux'
+import { useImageUrl } from '../common'
+
+import KrzyzWKoronie from '../../public/krzyz-w-koronie-256x256.png'
 
 const useStyles = makeStyles((theme) => ({
   user: {},
@@ -89,7 +92,7 @@ const UserMenu = (props) => {
         rel="noopener noreferrer"
         className={classes.link}
       >
-        <img className={classes.logoImage} src="/krzyz-w-koronie-256x256.png" />
+        <img className={classes.logoImage} src={KrzyzWKoronie} />
         Nastrazy.org
       </a>
     </div>
