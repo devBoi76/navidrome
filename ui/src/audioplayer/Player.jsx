@@ -9,7 +9,7 @@ import {
   useDataProvider,
   useTranslate,
 } from 'react-admin'
-import ReactGA from 'react-ga'
+import ReactGA from 'react-ga4'
 import { GlobalHotKeys } from 'react-hotkeys'
 import ReactJkMusicPlayer from 'navidrome-music-player'
 import 'navidrome-music-player/assets/index.css'
@@ -305,10 +305,10 @@ const Player = () => {
           setHeartbeatTrackId(info.trackId)
         }
         if (config.gaTrackingId) {
-          ReactGA.event({
+          ReactGA.event('play_song', {
+            song_title: song.title,
+            artist: song.artist,
             category: 'Player',
-            action: 'Play song',
-            label: `${song.title} - ${song.artist}`,
           })
         }
         if (showNotifications) {

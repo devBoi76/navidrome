@@ -1,4 +1,4 @@
-import ReactGA from 'react-ga'
+import ReactGA from 'react-ga4'
 import { Provider } from 'react-redux'
 import { createHashHistory } from 'history'
 import {
@@ -56,9 +56,13 @@ const history = createHashHistory()
 if (config.gaTrackingId) {
   ReactGA.initialize(config.gaTrackingId)
   history.listen((location) => {
-    ReactGA.pageview(location.pathname)
+    ReactGA.event('page_view', {
+      page_location: window.location.href,
+    })
   })
-  ReactGA.pageview(window.location.pathname)
+  ReactGA.event('page_view', {
+    page_location: window.location.href,
+  })
 }
 
 const adminStore = createAdminStore({
